@@ -1,0 +1,76 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+	/**/
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.item__container
+		&.item__container_table
+			.item__content
+				width: 55%
+			.item__footer
+				max-width: calc(55% - 80px)
+			.item__price
+				display: block
+				margin: 10px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 516px)
+
+	.main-menu__link
+		width: auto
+		white-space: normal
+	.item__container
+		margin: 20px
+		&.item__container_table
+			.item__content
+				width: calc(100% - 70px)
+			.item__footer
+				display: flex
+				max-width: none
+				justify-content: space-between
+			.item__price
+				display: inline-block
+				margin: 0
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/

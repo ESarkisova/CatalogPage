@@ -1,0 +1,19 @@
+
+mixin itemMix(name, descr, price, id)
+	.item.js-drag(id= 'id'+id)
+		.item__inner(data-id= id)
+			.item__img
+				img(src="/img/items/item.jpg" alt="фото товара" draggable=false)
+			.item__content
+				.item__name
+					span.item__name-txt.js-edit-name= name+id
+					.hidden
+						input.item__input.js-input-name(value= name+id)
+						button.button.js-save-name Готово
+				span.item__description= descr
+			.item__footer
+				span.item__price= price
+				button.button В корзину
+
+- for (var x = 0; x < 12; x++)
+	+itemMix("Шуруповерт", "Аккумуляторная дрель-шуруповёрт Bosch GSR 18-2-LI Plus Professional 0.601.9E6.120", '300.00', x)

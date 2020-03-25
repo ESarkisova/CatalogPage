@@ -1,0 +1,194 @@
+@import "part/fonts"
+@import "part/vars"
+
+/*Common*/
+nav, footer, header
+	display: block
+html, body
+	height: 100%
+	min-height: 100%
+body
+	margin: 0
+	padding: 0
+	background-color: #fff
+	font-family: $default-font
+	color: $black
+.main-container
+	display: flex
+	height: auto
+	min-height: 100%
+	align-items: center
+	justify-content: center
+.content
+	margin: 30px 15px
+	width: 100%
+	max-width: 1200px
+	height: auto
+	min-height: calc(100vh - 64px)
+	border-radius: 5px
+	border: 2px solid $gray
+	&.content_without-brd
+		border: none
+.hidden
+	display: none
+.input-group
+	position: relative
+	margin-bottom: 10px
+	width: 230px
+	max-width: 100%
+	height: 34px
+	input
+		box-sizing: border-box
+/*Header*/
+.header
+	position: relative
+	height: 50px
+	background-color: $gray
+.main-menu__hidden-btn
+	float: left
+	width: 50%
+	height: 100%
+	cursor: pointer
+	&:hover
+		&>.main-menu
+			display: block
+.main-menu
+	position: absolute
+	display: none
+	left: 20px
+	top: 100%
+	margin: -1px 0 0 0
+	padding: 5px
+	background-color: #fff
+	border: 1px solid $gray
+	list-style-type: none
+.main-menu__link
+	display: block
+	width: max-content
+	white-space: nowrap
+.main-menu__sub
+	display: none
+	padding-left: 15px
+	list-style-type: none
+.main-menu__first>.main-menu__item
+	position: relative
+	display: block
+	cursor: pointer
+.main-menu__first>.main-menu__item:hover .main-menu__sub
+	display: block
+.main-menu__first>.main-menu__item>.main-menu__sub
+	position: absolute
+	left: 100%
+	top: 0
+	padding: 5px
+	background-color: #fff
+	border: 1px solid $gray
+.right-menu
+	float: right
+	width: 50%
+	height: 100%
+	cursor: pointer
+/*Content*/
+.item__container
+	margin: 20px 40px
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	&.item__container_table
+		flex-direction: column
+		.item
+			max-width: none
+		.item__inner
+			&>*
+				display: inline-block
+				vertical-align: middle
+		.item__img
+			height: 30px
+			max-width: 30px
+		.item__content
+			width: 60%
+		.item__price
+			display: inline-block
+			margin: 0 10px
+
+
+.item
+	display: block
+	max-width: 300px
+	margin: 10px
+	border: 1px solid $gray
+.item__img
+	max-width: 100%
+	height: 150px
+	padding: 5px
+	text-align: center
+	&>img
+		max-width: 100%
+		max-height: 100%
+		object-fit: contain
+		pointer-events: none
+.item__content
+	padding: 5px 10px
+.item__name
+	position: relative
+	display: block
+	height: 34px
+	font-size: 16px
+	overflow: hidden
+	text-overflow: ellipsis
+.item__input
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	width: 100%
+	padding: 7px 25px 7px 7px
+	border: 1px solid $gray
+	font-size: 16px
+	z-index: 2
+	&+.button
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		z-index: 2
+
+
+.item__description
+	display: block
+	display: -webkit-box
+	font-size: 14px
+	-webkit-line-clamp: 3
+	-webkit-box-orient: vertical
+	overflow: hidden
+	text-overflow: ellipsis
+	color: #757575
+.item__footer
+	display: flex
+	justify-content: space-between
+	padding: 10px
+	font-weight: bold
+.button
+	padding: 5px 10px
+	background-color: #fff
+	color: $accent
+	border: 1px solid $accent
+	cursor: pointer
+	transition: background-color $trans, color $trans
+	&:hover
+		background-color: $accent
+		color: #fff
+	&.loading
+		opacity: .7
+		pointer-events: none
+/*Drag Drop styles*/
+.dragging
+	background-color: #fff
+	opacity: 0.5
+
+.over
+	border: 1px solid #74b9ff
+
+
+
+@import "part/media" // Всегда в конце
